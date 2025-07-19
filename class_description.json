@@ -1,0 +1,331 @@
+{
+    "skin_acne": {
+        "name": "Acne",
+        "description": "A common skin condition where hair follicles become clogged with oil and dead skin cells, leading to pimples, blackheads, or whiteheads.",
+        "symptoms": "Whiteheads, blackheads, papules, pustules, cystic lesions, oily skin, possible scarring.",
+        "precautions": "Keep skin clean, avoid touching face, use non-comedogenic products, maintain a balanced diet, avoid excessive scrubbing.",
+        "treatment": "Over-the-counter creams with benzoyl peroxide, salicylic acid, topical retinoids, oral antibiotics, hormonal therapy for severe cases."
+    },
+    "skin_actinic_keratosis": {
+        "name": "Actinic Keratosis (Solar Keratosis)",
+        "description": "A rough, scaly patch caused by long-term sun exposure that can progress to squamous cell carcinoma.",
+        "symptoms": "Dry, scaly patches or spots, color changes, itching or burning in affected areas.",
+        "precautions": "Limit sun exposure, wear protective clothing, apply sunscreen daily, avoid tanning beds.",
+        "treatment": "Cryotherapy, topical medications (5-FU, imiquimod), photodynamic therapy, laser therapy, minor surgical removal."
+    },
+    "skin_basal_cell_carcinoma": {
+        "name": "Basal Cell Carcinoma",
+        "description": "Most common form of skin cancer, often appearing as a pearly bump or scaly patch.",
+        "symptoms": "Pearly bump, open sore that bleeds and doesn't heal, flat scaly reddish patch, scar-like lesion.",
+        "precautions": "Avoid direct sun exposure, use broad-spectrum sunscreen, wear hats and protective clothing, regular skin checks.",
+        "treatment": "Surgical excision, Mohs micrographic surgery, cryotherapy, topical therapies for superficial cases."
+    },
+    "skin_melanoma": {
+        "name": "Melanoma",
+        "description": "The most serious skin cancer developing from pigment cells (melanocytes).",
+        "symptoms": "New mole or change in existing mole, asymmetry, irregular borders, multiple colors, diameter >6mm, evolving appearance.",
+        "precautions": "Avoid UV exposure, use high SPF sunscreen, wear protective clothing, regular skin self-exams.",
+        "treatment": "Surgical removal, sentinel node biopsy, immunotherapy, targeted therapy, chemotherapy for advanced cases."
+    },
+    "skin_normal_skin": {
+        "name": "Normal Skin",
+        "description": "Skin without visible disease or abnormal lesions.",
+        "symptoms": "Even tone, no rashes, no lesions or abnormal moles.",
+        "precautions": "Maintain hygiene, protect from excessive sun, moisturize, eat a balanced diet, stay hydrated.",
+        "treatment": "No treatment needed."
+    },
+    "skin_chickenpox": {
+        "name": "Chickenpox",
+        "description": "A highly contagious viral infection causing an itchy, blister-like rash.",
+        "symptoms": "Fever, headache, tiredness, itchy red spots that become fluid-filled blisters.",
+        "precautions": "Vaccination, avoid contact with infected people, isolate infected individuals.",
+        "treatment": "Symptomatic relief with antihistamines, calamine lotion, antiviral drugs in severe cases."
+    },
+    "skin_dermato_fibroma": {
+        "name": "Dermatofibroma",
+        "description": "A benign skin nodule that usually appears on the legs or arms.",
+        "symptoms": "Firm, raised, reddish-brown bump, usually painless.",
+        "precautions": "Avoid skin trauma, no prevention needed.",
+        "treatment": "No treatment needed unless removal for cosmetic reasons."
+    },
+    "skin_dyshidrotic_eczema": {
+        "name": "Dyshidrotic Eczema",
+        "description": "A form of eczema causing small, itchy blisters on hands and feet.",
+        "symptoms": "Tiny blisters, intense itching, peeling or cracked skin.",
+        "precautions": "Keep hands dry, avoid irritants, moisturize regularly.",
+        "treatment": "Topical steroids, cold compresses, antihistamines, immunosuppressants for severe cases."
+    },
+    "skin_nail_fungus": {
+        "name": "Nail Fungus (Onychomycosis)",
+        "description": "Fungal infection causing thickened, discolored nails.",
+        "symptoms": "Yellow or white spots, thick nails, brittle or crumbly edges.",
+        "precautions": "Keep nails dry, wear breathable shoes, avoid walking barefoot in public showers.",
+        "treatment": "Antifungal creams or oral medications, nail removal in severe cases."
+    },
+    "skin_nevus": {
+        "name": "Nevus (Mole)",
+        "description": "A benign cluster of pigment cells on the skin.",
+        "symptoms": "Small, dark brown spots or growths, symmetrical shape.",
+        "precautions": "Sun protection, monitor for changes, regular skin checks.",
+        "treatment": "No treatment unless removal for cosmetic or medical reasons."
+    },
+    "skin_pigmented_benign_keratosis": {
+        "name": "Pigmented Benign Keratosis",
+        "description": "Common non-cancerous skin growth with a waxy, stuck-on appearance.",
+        "symptoms": "Waxy, raised, brown or black spots.",
+        "precautions": "No specific prevention, monitor for changes.",
+        "treatment": "Removal by cryotherapy, curettage, or laser for cosmetic reasons."
+    },
+    "skin_ringworm": {
+        "name": "Ringworm",
+        "description": "Fungal skin infection causing a ring-shaped rash.",
+        "symptoms": "Red, circular rash with clear center, itchy skin.",
+        "precautions": "Keep skin clean and dry, avoid sharing personal items.",
+        "treatment": "Topical antifungal creams, oral antifungal medication for severe cases."
+    },
+    "skin_seborrheic_keratosis": {
+        "name": "Seborrheic Keratosis",
+        "description": "Common benign skin growth with a waxy, warty appearance that typically appears with aging.",
+        "symptoms": "Waxy, scaly, raised growths, brown or black color, stuck-on appearance.",
+        "precautions": "No specific prevention, avoid irritating the lesions.",
+        "treatment": "Removal by cryotherapy, curettage, electrocautery, or laser for cosmetic purposes."
+    },
+    "skin_squamous_cell_carcinoma": {
+        "name": "Squamous Cell Carcinoma",
+        "description": "Common skin cancer forming in squamous cells of the skin.",
+        "symptoms": "Firm red nodule, scaly patch, sore that doesn't heal.",
+        "precautions": "Avoid excessive sun exposure, use sunscreen, wear protective clothing.",
+        "treatment": "Surgical removal, radiation, topical treatments for early lesions."
+    },
+    "skin_vascular_lesion": {
+        "name": "Vascular Lesion",
+        "description": "Abnormal collection of blood vessels present at birth or developing later.",
+        "symptoms": "Red or purple patches, swelling, visible veins.",
+        "precautions": "Protect area from trauma, monitor for changes.",
+        "treatment": "Laser therapy, minor surgery if needed."
+    },
+    "all_benign": {
+        "name": "All Benign Lesions",
+        "description": "Classification for all non-cancerous lesions across different organ systems.",
+        "symptoms": "Varies depending on location and type of benign lesion.",
+        "precautions": "Regular monitoring, routine medical check-ups.",
+        "treatment": "Observation, symptomatic treatment, or removal if causing complications."
+    },
+    "all_early": {
+        "name": "All Early Stage Conditions",
+        "description": "Early-stage diseases or conditions detected before significant progression.",
+        "symptoms": "Minimal or no symptoms, detected through screening or routine examinations.",
+        "precautions": "Regular screening, maintain healthy lifestyle, follow medical recommendations.",
+        "treatment": "Early intervention, monitoring, lifestyle modifications, targeted therapy."
+    },
+    "all_pre": {
+        "name": "All Pre-malignant Conditions",
+        "description": "Pre-cancerous changes that may progress to malignancy if left untreated.",
+        "symptoms": "Usually asymptomatic, detected through screening tests.",
+        "precautions": "Regular screening, avoid risk factors, healthy lifestyle.",
+        "treatment": "Close monitoring, removal of abnormal tissue, preventive measures."
+    },
+    "all_pro": {
+        "name": "All Progressive Conditions",
+        "description": "Conditions that tend to worsen or advance over time without treatment.",
+        "symptoms": "Progressive worsening of symptoms, functional decline.",
+        "precautions": "Early detection, regular monitoring, adherence to treatment.",
+        "treatment": "Aggressive treatment, symptom management, supportive care."
+    },
+    "brain_glioma_tumor": {
+        "name": "Brain: Glioma Tumor",
+        "description": "A tumor arising from glial cells in the brain or spinal cord, possibly cancerous.",
+        "symptoms": "Headaches, seizures, vision problems, weakness, memory loss.",
+        "precautions": "No specific prevention; manage risk with regular health checks and avoid radiation exposure.",
+        "treatment": "Surgery, radiation therapy, chemotherapy, targeted therapy, supportive care."
+    },
+    "brain_meningioma_tumor": {
+        "name": "Brain: Meningioma Tumor",
+        "description": "A usually benign tumor from brain/spinal cord membranes.",
+        "symptoms": "Headache, vision problems, weakness, seizures.",
+        "precautions": "No known prevention, regular monitoring if detected early.",
+        "treatment": "Surgery, radiation therapy, observation for small asymptomatic tumors."
+    },
+    "brain_normal": {
+        "name": "Brain: Normal Scan",
+        "description": "A normal brain scan with no signs of tumors or abnormalities.",
+        "symptoms": "Normal neurological function, no headaches, no unexplained symptoms.",
+        "precautions": "Healthy lifestyle, avoid head injuries, manage chronic diseases.",
+        "treatment": "No treatment needed."
+    },
+    "brain_pituitary_tumor": {
+        "name": "Brain: Pituitary Tumor",
+        "description": "Benign or rarely malignant tumor in the pituitary gland.",
+        "symptoms": "Headaches, vision loss, hormonal imbalances.",
+        "precautions": "No known prevention, monitor symptoms and hormone levels.",
+        "treatment": "Medication, surgery, radiation depending on size and type."
+    },
+    "breast_benign": {
+        "name": "Breast: Benign Lesion",
+        "description": "Non-cancerous breast lump like fibroadenoma or cyst.",
+        "symptoms": "Movable lump, no pain, stable size.",
+        "precautions": "Regular self-exams, routine check-ups.",
+        "treatment": "Observation or surgical removal if large or symptomatic."
+    },
+    "breast_malignant": {
+        "name": "Breast: Malignant Tumor",
+        "description": "Cancerous growth in the breast tissue that requires prompt treatment.",
+        "symptoms": "Lump in breast, nipple discharge, skin dimpling, change in breast shape.",
+        "precautions": "Routine self-exams, mammograms, healthy weight, limit alcohol.",
+        "treatment": "Surgery, radiation therapy, chemotherapy, hormonal or targeted therapy."
+    },
+    "cervix_dyk": {
+        "name": "Cervix: Dyskaryosis",
+        "description": "Abnormal cells in the cervix, possible pre-cancerous change.",
+        "symptoms": "Usually asymptomatic, found via Pap test.",
+        "precautions": "HPV vaccination, regular screening.",
+        "treatment": "Colposcopy, possible removal of abnormal tissue."
+    },
+    "cervix_koc": {
+        "name": "Cervix: Koilocytosis",
+        "description": "HPV-related cell changes in cervical tissue.",
+        "symptoms": "No symptoms, detected in Pap smear.",
+        "precautions": "HPV vaccine, safe sexual practices.",
+        "treatment": "Monitoring, removal of affected tissue if needed."
+    },
+    "cervix_mep": {
+        "name": "Cervix: Metaplastic Epithelium",
+        "description": "Normal replacement of one cell type by another in the cervix.",
+        "symptoms": "No symptoms, found incidentally.",
+        "precautions": "Routine screening.",
+        "treatment": "No treatment needed."
+    },
+    "cervix_pab": {
+        "name": "Cervix: Parabasal Cells",
+        "description": "Immature cells found during inflammation or menopause.",
+        "symptoms": "None; may relate to vaginal dryness.",
+        "precautions": "Routine gynecological care.",
+        "treatment": "Treat underlying cause if needed."
+    },
+    "cervix_sfi": {
+        "name": "Cervix: Squamous Cell Carcinoma",
+        "description": "Cervical cancer starting in squamous cells.",
+        "symptoms": "Irregular bleeding, pelvic pain, unusual discharge.",
+        "precautions": "HPV vaccine, Pap smears.",
+        "treatment": "Surgery, radiation, chemotherapy."
+    },
+    "colon_aca": {
+        "name": "Colon: Adenocarcinoma",
+        "description": "Most common colon cancer type.",
+        "symptoms": "Rectal bleeding, weight loss, changes in bowel habits.",
+        "precautions": "Screening colonoscopies, high-fiber diet.",
+        "treatment": "Surgery, chemotherapy, targeted therapy."
+    },
+    "colon_bnt": {
+        "name": "Colon: Benign Tissue",
+        "description": "Normal healthy colon tissue.",
+        "symptoms": "No symptoms.",
+        "precautions": "Routine screenings.",
+        "treatment": "No treatment needed."
+    },
+    "kidney_cyst": {
+        "name": "Kidney: Cyst",
+        "description": "Fluid-filled sacs that develop in the kidneys, usually benign.",
+        "symptoms": "Often asymptomatic, may cause flank pain or urinary symptoms if large.",
+        "precautions": "Regular monitoring, maintain kidney health.",
+        "treatment": "Observation for small cysts, drainage or surgery for large symptomatic cysts."
+    },
+    "kidney_normal": {
+        "name": "Kidney: Normal",
+        "description": "Normal healthy kidney tissue and function.",
+        "symptoms": "No symptoms, normal kidney function.",
+        "precautions": "Stay hydrated, maintain healthy blood pressure, avoid nephrotoxic medications.",
+        "treatment": "No treatment needed."
+    },
+    "kidney_stone": {
+        "name": "Kidney: Kidney Stone",
+        "description": "Hard mineral deposits that form inside the kidneys and cause pain.",
+        "symptoms": "Severe back pain, blood in urine, frequent urination, nausea.",
+        "precautions": "Stay hydrated, limit salt and animal protein intake.",
+        "treatment": "Pain management, increased fluid intake, medications, shock wave therapy, surgery if needed."
+    },
+    "kidney_tumor": {
+        "name": "Kidney: Tumor",
+        "description": "Abnormal growth in kidney tissue that may be benign or malignant.",
+        "symptoms": "Blood in urine, flank pain, palpable mass, weight loss.",
+        "precautions": "Regular check-ups, avoid smoking, maintain healthy lifestyle.",
+        "treatment": "Surgery, targeted therapy, immunotherapy, radiation therapy depending on type and stage."
+    },
+    "lung_colon_aca": {
+        "name": "Lung: Colon Adenocarcinoma Metastasis",
+        "description": "Colon cancer that has spread to the lungs.",
+        "symptoms": "Shortness of breath, chest pain, persistent cough, fatigue.",
+        "precautions": "Regular follow-up for colon cancer patients, healthy lifestyle.",
+        "treatment": "Chemotherapy, targeted therapy, surgery, radiation therapy, palliative care."
+    },
+    "lung_colon_n": {
+        "name": "Lung: Normal (Colon Cancer Patient)",
+        "description": "Normal lung tissue in a patient with history of colon cancer.",
+        "symptoms": "No respiratory symptoms.",
+        "precautions": "Regular monitoring for metastases, maintain lung health.",
+        "treatment": "No treatment needed, continue surveillance."
+    },
+    "lung_lung_aca": {
+        "name": "Lung: Lung Adenocarcinoma",
+        "description": "Primary lung cancer arising from glandular cells.",
+        "symptoms": "Persistent cough, chest pain, shortness of breath, weight loss.",
+        "precautions": "Avoid smoking, limit exposure to carcinogens, regular screening if high risk.",
+        "treatment": "Surgery, chemotherapy, targeted therapy, immunotherapy, radiation therapy."
+    },
+    "lung_lung_scc": {
+        "name": "Lung: Squamous Cell Carcinoma",
+        "description": "Primary lung cancer arising from squamous cells, strongly linked to smoking.",
+        "symptoms": "Chronic cough, chest pain, hemoptysis, shortness of breath.",
+        "precautions": "Smoking cessation, avoid secondhand smoke, occupational safety.",
+        "treatment": "Surgery, chemotherapy, radiation therapy, immunotherapy, targeted therapy."
+    },
+    "lymph_cll": {
+        "name": "Lymph: Chronic Lymphocytic Leukemia",
+        "description": "Cancer affecting white blood cells and lymphoid tissue.",
+        "symptoms": "Fatigue, swollen lymph nodes, frequent infections, easy bruising.",
+        "precautions": "No known prevention, avoid infections, regular monitoring.",
+        "treatment": "Watch and wait approach, chemotherapy, targeted therapy, stem cell transplant."
+    },
+    "lymph_fl": {
+        "name": "Lymph: Follicular Lymphoma",
+        "description": "Slow-growing cancer of the lymphatic system.",
+        "symptoms": "Painless swollen lymph nodes, fatigue, night sweats, weight loss.",
+        "precautions": "No known prevention, maintain immune system health.",
+        "treatment": "Watch and wait, chemotherapy, radiation therapy, immunotherapy, targeted therapy."
+    },
+    "lymph_mcl": {
+        "name": "Lymph: Mantle Cell Lymphoma",
+        "description": "Aggressive form of non-Hodgkin lymphoma.",
+        "symptoms": "Swollen lymph nodes, fever, night sweats, weight loss, fatigue.",
+        "precautions": "No known prevention, early detection important.",
+        "treatment": "Intensive chemotherapy, targeted therapy, stem cell transplant, clinical trials."
+    },
+    "oral_normal": {
+        "name": "Oral: Normal Tissue",
+        "description": "Normal healthy oral cavity tissue.",
+        "symptoms": "No symptoms, healthy appearance of oral tissues.",
+        "precautions": "Good oral hygiene, regular dental check-ups, avoid tobacco and excessive alcohol.",
+        "treatment": "No treatment needed."
+    },
+    "oral_scc": {
+        "name": "Oral: Squamous Cell Carcinoma",
+        "description": "Cancer of the mouth affecting squamous cells lining the oral cavity.",
+        "symptoms": "Persistent mouth sores, white or red patches, difficulty swallowing, loose teeth.",
+        "precautions": "Avoid tobacco and alcohol, maintain oral hygiene, regular dental exams.",
+        "treatment": "Surgery, radiation therapy, chemotherapy, targeted therapy."
+    },
+    "pancreatic_normal": {
+        "name": "Pancreatic: Normal Tissue",
+        "description": "Normal healthy pancreatic tissue and function.",
+        "symptoms": "No symptoms, normal pancreatic function.",
+        "precautions": "Maintain healthy diet, limit alcohol, avoid smoking, manage diabetes if present.",
+        "treatment": "No treatment needed."
+    },
+    "pancreatic_tumor": {
+        "name": "Pancreatic: Tumor",
+        "description": "Abnormal growth in pancreatic tissue, potentially malignant.",
+        "symptoms": "Abdominal pain, weight loss, jaundice, new-onset diabetes.",
+        "precautions": "Avoid smoking, maintain healthy weight, limit alcohol consumption.",
+        "treatment": "Surgery, chemotherapy, radiation therapy, targeted therapy, supportive care."
+    }
+}

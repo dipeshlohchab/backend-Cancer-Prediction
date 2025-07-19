@@ -1,0 +1,67 @@
+# Python
+############
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+# Virtual environments
+myvenv/
+myvenv/  # Specific to your setup if you named it myvenv
+*.egg-info/
+.pytest_cache/
+.tox/
+.venv/
+build/
+dist/
+
+# Editor/IDE specific files
+########################
+.vscode/ # VS Code specific files
+.idea/   # PyCharm specific files
+*.swp    # Vim swap files
+*~       # Emacs backup files
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+########################
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Logs and temporary files
+##########################
+*.log
+*.tmp
+*.temp
+/tmp/
+
+# Machine Learning specific files
+#################################
+# Model files (if NOT tracked by Git LFS and you NEVER want them in Git)
+# If you are using Git LFS for Cancer_Classification.keras, DO NOT uncomment this line.
+# Cancer_Classification.keras
+
+# Checkpoints/saved models (if you only want to keep the final model in Git)
+# These are often large and generated during training.
+# saved_models/
+# checkpoints/
+# *.h5 # Uncomment if you have other .h5 files you want to ignore globally
+# *.keras # Uncomment if you have other .keras files you want to ignore globally
+
+# Dataset directories (often too large for Git)
+# data/
+# raw_data/
+# processed_data/
+
+# Jupyter Notebook files (if you convert them to .py for deployment)
+# .ipynb_checkpoints/
+# *.ipynb_checkpoints/
+
+# Environment variables files (often contain sensitive info)
+.env
+.flaskenv
+
+# Render related files (if any are generated locally)
+.render/
