@@ -15,6 +15,7 @@ myvenv/  # Specific to your setup if you named it myvenv
 .venv/
 build/
 dist/
+Cancer_Classification.keras 
 
 # Editor/IDE specific files
 ########################

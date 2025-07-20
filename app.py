@@ -20,6 +20,7 @@ CLASS_DESCRIPTIONS = {}
 HF_REPO_ID = "dipeshlohchab0302/Cancer_Prediction"
 HF_MODEL_FILENAME = "Cancer_Classification.keras" # Assuming this is the name of your model file in the Hugging Face repo
 
+MODEL_PATH="./Cancer_Classification.keras" # This is the local path where the model will be downloaded
 # --- Paths to your local JSON data files (these are still needed locally or in your repo) ---
 CLASS_NAMES_PATH = "class_names.json"
 CLASS_DESCRIPTIONS_PATH = "class_description.json"
@@ -29,47 +30,58 @@ CLASS_DESCRIPTIONS_PATH = "class_description.json"
 async def lifespan(app: FastAPI):
     """
     Handles startup and shutdown events for the FastAPI application.
-    Downloads the Keras model from Hugging Face Hub and loads other resources on startup.
+    Downloads the Keras model from Hugging Face Hub with a local fallback.
     """
     global MODEL, CLASS_NAMES, CLASS_DESCRIPTIONS
 
-    # --- Startup Logic: Load resources ---
     print("Application startup initiated. Loading resources...")
 
-    # Load Keras Model from Hugging Face Hub (MODIFIED SECTION)
+    # --- Startup Logic: Load Keras Model ---
     try:
+        # --- Primary Method: Attempt to download from Hugging Face Hub ---
         print(f"Attempting to download model from Hugging Face Hub: {HF_REPO_ID}/{HF_MODEL_FILENAME}...")
-        # hf_hub_download downloads the file to a local cache or specified directory.
-        # local_dir='./' downloads it to the current working directory of the app.
-        # local_dir_use_symlinks=False ensures the actual file is copied, not a symlink,
-        # which is safer in some deployment environments.
+        
         downloaded_model_path = hf_hub_download(
             repo_id=HF_REPO_ID,
             filename=HF_MODEL_FILENAME,
-            local_dir='./', # Downloads to the app's root directory in the container
+            local_dir='./',
             local_dir_use_symlinks=False
         )
         print(f"Model downloaded to: {downloaded_model_path}")
-
+        
         MODEL = tf.keras.models.load_model(downloaded_model_path)
-        MODEL.summary() # Print model summary to console to confirm structure
-        print("Keras model loaded successfully.")
-    except Exception as e:
-        print(f"ERROR: Failed to download or load Keras model from Hugging Face Hub. Details: {e}")
-        MODEL = None
-        # It's critical for the app to function, so we raise an error to prevent startup if model fails.
-        raise RuntimeError(f"Critical: Model failed to download/load. Application cannot start. {e}")
+        print("Keras model loaded successfully from Hugging Face Hub.")
 
-    # Load Class Names (raw labels from training) (No change from previous)
-    try:
-        print(f"Attempting to load class names from {CLASS_NAMES_PATH}...")
-        with open(CLASS_NAMES_PATH, 'r') as f:
-            CLASS_NAMES = json.load(f)
-        print(f"Class names loaded successfully. Total: {len(CLASS_NAMES)} classes.")
-    except Exception as e:
-        print(f"ERROR: Failed to load class names from {CLASS_NAMES_PATH}. Details: {e}")
-        CLASS_NAMES = []
-        raise RuntimeError(f"Critical: Class names failed to load. Application cannot start. {e}") # Critical for app too
+    except Exception as hf_error:
+        # --- Fallback Method: If Hugging Face download fails, load from local path ---
+        print(f"WARNING: Hugging Face download failed. Reason: {hf_error}")
+        print(f"Attempting to load model from local fallback path: {MODEL_PATH}")
+        
+        try:
+            if not os.path.exists(MODEL_PATH):
+                raise FileNotFoundError(f"Local model file not found at {MODEL_PATH}")
+
+            MODEL = tf.keras.models.load_model(MODEL_PATH)
+            print("Keras model loaded successfully from local path.")
+
+        except Exception as local_error:
+            # --- Critical Failure: If both methods fail, stop the application ---
+            print(f"ERROR: Failed to load model from local path as well. Reason: {local_error}")
+            raise RuntimeError(
+                "Critical: Model failed to download from Hub and also failed to load from local path. Application cannot start."
+            )
+
+    # If model is loaded (from either source), print summary
+    if MODEL:
+        MODEL.summary()
+    
+    # This part is required by the async context manager
+    print("Model loading complete.")
+    
+    # --- Shutdown Logic (optional) ---
+    print("Application shutdown. Cleaning up resources...")
+    MODEL = None
+    # Any other cleanup code can go here.
 
     # Load Class Descriptions (user-friendly names and detailed descriptions) (No change from previous)
     try:
