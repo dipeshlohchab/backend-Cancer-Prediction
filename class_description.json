@@ -1,103 +1,103 @@
 {
-    "skin_acne": {
+    "Skin_Acne": {
         "name": "Acne",
         "description": "A common skin condition where hair follicles become clogged with oil and dead skin cells, leading to pimples, blackheads, or whiteheads.",
         "symptoms": "Whiteheads, blackheads, papules, pustules, cystic lesions, oily skin, possible scarring.",
         "precautions": "Keep skin clean, avoid touching face, use non-comedogenic products, maintain a balanced diet, avoid excessive scrubbing.",
         "treatment": "Over-the-counter creams with benzoyl peroxide, salicylic acid, topical retinoids, oral antibiotics, hormonal therapy for severe cases."
     },
-    "skin_actinic_keratosis": {
+    "Skin_Actinic Keratosis": {
         "name": "Actinic Keratosis (Solar Keratosis)",
         "description": "A rough, scaly patch caused by long-term sun exposure that can progress to squamous cell carcinoma.",
         "symptoms": "Dry, scaly patches or spots, color changes, itching or burning in affected areas.",
         "precautions": "Limit sun exposure, wear protective clothing, apply sunscreen daily, avoid tanning beds.",
         "treatment": "Cryotherapy, topical medications (5-FU, imiquimod), photodynamic therapy, laser therapy, minor surgical removal."
     },
-    "skin_basal_cell_carcinoma": {
+    "Skin_Basal Cell Carcinoma": {
         "name": "Basal Cell Carcinoma",
         "description": "Most common form of skin cancer, often appearing as a pearly bump or scaly patch.",
         "symptoms": "Pearly bump, open sore that bleeds and doesn't heal, flat scaly reddish patch, scar-like lesion.",
         "precautions": "Avoid direct sun exposure, use broad-spectrum sunscreen, wear hats and protective clothing, regular skin checks.",
         "treatment": "Surgical excision, Mohs micrographic surgery, cryotherapy, topical therapies for superficial cases."
     },
-    "skin_melanoma": {
+    "Skin_Melanoma": {
         "name": "Melanoma",
         "description": "The most serious skin cancer developing from pigment cells (melanocytes).",
         "symptoms": "New mole or change in existing mole, asymmetry, irregular borders, multiple colors, diameter >6mm, evolving appearance.",
         "precautions": "Avoid UV exposure, use high SPF sunscreen, wear protective clothing, regular skin self-exams.",
         "treatment": "Surgical removal, sentinel node biopsy, immunotherapy, targeted therapy, chemotherapy for advanced cases."
     },
-    "skin_normal_skin": {
+    "Skin_Normal Skin": {
         "name": "Normal Skin",
         "description": "Skin without visible disease or abnormal lesions.",
         "symptoms": "Even tone, no rashes, no lesions or abnormal moles.",
         "precautions": "Maintain hygiene, protect from excessive sun, moisturize, eat a balanced diet, stay hydrated.",
         "treatment": "No treatment needed."
     },
-    "skin_chickenpox": {
+    "Skin_Chickenpox": {
         "name": "Chickenpox",
         "description": "A highly contagious viral infection causing an itchy, blister-like rash.",
         "symptoms": "Fever, headache, tiredness, itchy red spots that become fluid-filled blisters.",
         "precautions": "Vaccination, avoid contact with infected people, isolate infected individuals.",
         "treatment": "Symptomatic relief with antihistamines, calamine lotion, antiviral drugs in severe cases."
     },
-    "skin_dermato_fibroma": {
+    "Skin_Dermato Fibroma": {
         "name": "Dermatofibroma",
         "description": "A benign skin nodule that usually appears on the legs or arms.",
         "symptoms": "Firm, raised, reddish-brown bump, usually painless.",
         "precautions": "Avoid skin trauma, no prevention needed.",
         "treatment": "No treatment needed unless removal for cosmetic reasons."
     },
-    "skin_dyshidrotic_eczema": {
+    "Skin_Dyshidrotic Eczema": {
         "name": "Dyshidrotic Eczema",
         "description": "A form of eczema causing small, itchy blisters on hands and feet.",
         "symptoms": "Tiny blisters, intense itching, peeling or cracked skin.",
         "precautions": "Keep hands dry, avoid irritants, moisturize regularly.",
         "treatment": "Topical steroids, cold compresses, antihistamines, immunosuppressants for severe cases."
     },
-    "skin_nail_fungus": {
+    "Skin_Nail Fungus": {
         "name": "Nail Fungus (Onychomycosis)",
         "description": "Fungal infection causing thickened, discolored nails.",
         "symptoms": "Yellow or white spots, thick nails, brittle or crumbly edges.",
         "precautions": "Keep nails dry, wear breathable shoes, avoid walking barefoot in public showers.",
         "treatment": "Antifungal creams or oral medications, nail removal in severe cases."
     },
-    "skin_nevus": {
+    "Skin_Nevus": {
         "name": "Nevus (Mole)",
         "description": "A benign cluster of pigment cells on the skin.",
         "symptoms": "Small, dark brown spots or growths, symmetrical shape.",
         "precautions": "Sun protection, monitor for changes, regular skin checks.",
         "treatment": "No treatment unless removal for cosmetic or medical reasons."
     },
-    "skin_pigmented_benign_keratosis": {
+    "Skin_Pigmented Benign Keratosis": {
         "name": "Pigmented Benign Keratosis",
         "description": "Common non-cancerous skin growth with a waxy, stuck-on appearance.",
         "symptoms": "Waxy, raised, brown or black spots.",
         "precautions": "No specific prevention, monitor for changes.",
         "treatment": "Removal by cryotherapy, curettage, or laser for cosmetic reasons."
     },
-    "skin_ringworm": {
+    "Skin_Ringworm": {
         "name": "Ringworm",
         "description": "Fungal skin infection causing a ring-shaped rash.",
         "symptoms": "Red, circular rash with clear center, itchy skin.",
         "precautions": "Keep skin clean and dry, avoid sharing personal items.",
         "treatment": "Topical antifungal creams, oral antifungal medication for severe cases."
     },
-    "skin_seborrheic_keratosis": {
+    "Skin_Seborrheic Keratosis": {
         "name": "Seborrheic Keratosis",
         "description": "Common benign skin growth with a waxy, warty appearance that typically appears with aging.",
         "symptoms": "Waxy, scaly, raised growths, brown or black color, stuck-on appearance.",
         "precautions": "No specific prevention, avoid irritating the lesions.",
         "treatment": "Removal by cryotherapy, curettage, electrocautery, or laser for cosmetic purposes."
     },
-    "skin_squamous_cell_carcinoma": {
+    "Skin_Squamous Cell Carcinoma": {
         "name": "Squamous Cell Carcinoma",
         "description": "Common skin cancer forming in squamous cells of the skin.",
         "symptoms": "Firm red nodule, scaly patch, sore that doesn't heal.",
         "precautions": "Avoid excessive sun exposure, use sunscreen, wear protective clothing.",
         "treatment": "Surgical removal, radiation, topical treatments for early lesions."
     },
-    "skin_vascular_lesion": {
+    "Skin_Vascular Lesion": {
         "name": "Vascular Lesion",
         "description": "Abnormal collection of blood vessels present at birth or developing later.",
         "symptoms": "Red or purple patches, swelling, visible veins.",

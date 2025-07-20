@@ -33,82 +33,67 @@ async def lifespan(app: FastAPI):
     Downloads the Keras model from Hugging Face Hub with a local fallback.
     """
     global MODEL, CLASS_NAMES, CLASS_DESCRIPTIONS
-
     print("Application startup initiated. Loading resources...")
 
-    # --- Startup Logic: Load Keras Model ---
+    # --- 1. Load Keras Model (Your existing logic is good) ---
     try:
-        # --- Primary Method: Attempt to download from Hugging Face Hub ---
         print(f"Attempting to download model from Hugging Face Hub: {HF_REPO_ID}/{HF_MODEL_FILENAME}...")
-        
         downloaded_model_path = hf_hub_download(
             repo_id=HF_REPO_ID,
             filename=HF_MODEL_FILENAME,
             local_dir='./',
             local_dir_use_symlinks=False
         )
-        print(f"Model downloaded to: {downloaded_model_path}")
-        
         MODEL = tf.keras.models.load_model(downloaded_model_path)
         print("Keras model loaded successfully from Hugging Face Hub.")
-
     except Exception as hf_error:
-        # --- Fallback Method: If Hugging Face download fails, load from local path ---
         print(f"WARNING: Hugging Face download failed. Reason: {hf_error}")
         print(f"Attempting to load model from local fallback path: {MODEL_PATH}")
-        
         try:
-            if not os.path.exists(MODEL_PATH):
-                raise FileNotFoundError(f"Local model file not found at {MODEL_PATH}")
-
             MODEL = tf.keras.models.load_model(MODEL_PATH)
             print("Keras model loaded successfully from local path.")
-
         except Exception as local_error:
-            # --- Critical Failure: If both methods fail, stop the application ---
-            print(f"ERROR: Failed to load model from local path as well. Reason: {local_error}")
-            raise RuntimeError(
-                "Critical: Model failed to download from Hub and also failed to load from local path. Application cannot start."
-            )
+            raise RuntimeError(f"Critical: Model failed to download/load from both sources. Application cannot start. Error: {local_error}")
 
-    # If model is loaded (from either source), print summary
     if MODEL:
         MODEL.summary()
-    
-    # This part is required by the async context manager
-    print("Model loading complete.")
-    
-    # --- Shutdown Logic (optional) ---
-    print("Application shutdown. Cleaning up resources...")
-    MODEL = None
-    # Any other cleanup code can go here.
 
-    # Load Class Descriptions (user-friendly names and detailed descriptions) (No change from previous)
+    # --- 2. Load Class Names (CRITICAL FIX) ---
+    try:
+        print(f"Attempting to load class names from {CLASS_NAMES_PATH}...")
+        with open(CLASS_NAMES_PATH, 'r') as f:
+            CLASS_NAMES = json.load(f)
+        print(f"Class names loaded successfully. Total: {len(CLASS_NAMES)} classes.")
+    except Exception as e:
+        raise RuntimeError(f"Critical: Class names failed to load from {CLASS_NAMES_PATH}. Application cannot start. Error: {e}")
+
+    # --- 3. Load Class Descriptions (MOVED TO CORRECT LOCATION) ---
     try:
         print(f"Attempting to load class descriptions from {CLASS_DESCRIPTIONS_PATH}...")
         with open(CLASS_DESCRIPTIONS_PATH, 'r') as f:
             CLASS_DESCRIPTIONS = json.load(f)
         print(f"Class descriptions loaded successfully. Total: {len(CLASS_DESCRIPTIONS)} entries.")
     except Exception as e:
-        print(f"ERROR: Failed to load class descriptions from {CLASS_DESCRIPTIONS_PATH}. Details: {e}")
-        CLASS_DESCRIPTIONS = {}
-        raise RuntimeError(f"Critical: Class descriptions failed to load. Application cannot start. {e}") # Critical for app too
+        raise RuntimeError(f"Critical: Class descriptions failed to load. Application cannot start. Error: {e}")
+        
+    # --- 4. Consistency Checks ---
+    if len(CLASS_NAMES) != MODEL.output_shape[1]:
+        print(f"WARNING: Model expects {MODEL.output_shape[1]} classes, but {len(CLASS_NAMES)} class names were loaded.")
+    
+    missing_descriptions = [name for name in CLASS_NAMES if normalize_class_name_for_lookup(name) not in CLASS_DESCRIPTIONS]
+    if missing_descriptions:
+        print(f"WARNING: Missing descriptions for {len(missing_descriptions)} classes.")
 
-    # Optional: Consistency check (No change from previous)
-    if CLASS_NAMES and CLASS_DESCRIPTIONS:
-        missing_descriptions = [name for name in CLASS_NAMES if name not in CLASS_DESCRIPTIONS]
-        if missing_descriptions:
-            print(f"WARNING: Missing human-readable descriptions for {len(missing_descriptions)} classes: {missing_descriptions}")
-            print("         These classes will use a generic 'Unknown' fallback.")
-        else:
-            print("All class names have corresponding descriptions.")
+    # --- 5. Application is ready ---
+    print("Application startup complete. Server is ready.")
+    yield # <--- All startup logic is BEFORE yield
 
-    print("Application startup complete. Server is ready to receive requests.")
-    yield # This line signals that the application is ready to handle requests
-
-    # --- Shutdown Logic (No change) ---
-    print("Application shutdown initiated. Performing cleanup (if any)...")
-    print("Application shutdown complete.")
+    # --- Shutdown Logic ---
+    print("Application shutdown initiated.")
+    MODEL = None
+    CLASS_NAMES = []
+    CLASS_DESCRIPTIONS = {}
+    print("Resources cleaned up. Application shutdown complete.")
 
 # --- Initialize FastAPI Application (No change) ---
 app = FastAPI(
