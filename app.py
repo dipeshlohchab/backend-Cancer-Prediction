@@ -18,9 +18,9 @@ CLASS_DESCRIPTIONS = {}
 # --- Hugging Face Model Details ---
 # These are derived from your provided Hugging Face repository URL
 HF_REPO_ID = "dipeshlohchab0302/Cancer_Prediction"
-HF_MODEL_FILENAME = "Cancer_Classification.keras" # Assuming this is the name of your model file in the Hugging Face repo
+HF_MODEL_FILENAME = "Cancer_Classification (2).keras" # Assuming this is the name of your model file in the Hugging Face repo
 
-MODEL_PATH="./Cancer_Classification.keras" # This is the local path where the model will be downloaded
+MODEL_PATH="./Cancer_Classification (2).keras" # This is the local path where the model will be downloaded
 # --- Paths to your local JSON data files (these are still needed locally or in your repo) ---
 CLASS_NAMES_PATH = "class_names.json"
 CLASS_DESCRIPTIONS_PATH = "class_description.json"
